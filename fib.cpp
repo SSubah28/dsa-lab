@@ -1,32 +1,36 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
-class Fibonacci {
-private:
-    unsigned long long int f0, f1;
+    class fib{
 
-public:
-    Fibonacci() {
-        f0 = 0;
-        f1 = 1;
-    }
+    public :
+        int a,b;
+        fib( int n){ a=0;
+        b=1;
+        fib1(n);}
+        void fib1(int n){
+            int i,d,e,g;
+                        cout<<a<<" "<< b<<" ";
 
-    void display_series(int n) {
-        cout << f0 << " " << f1 << " ";
-        for (int i = 2; i < n; i++) {
-            unsigned long long int f = f0 + f1;
-            cout << f << " ";
-            f0 = f1;
-            f1 = f;
+            for(i=3;i<= n ;i++){
+            d = a + b;
+            a =b;
+            b = d;
+            cout<<d<<" ";
         }
-        cout << endl;
-    }
-};
+        }
 
-int main() {
-    Fibonacci fib;
-    int num;
-    cin >> num;
-    fib.display_series(num);
-    return 0;
+
+    };
+
+int main(){
+    int n;
+    cin>>n;
+fib f(n);
+
+return 0;
+
+
 }
+
+
